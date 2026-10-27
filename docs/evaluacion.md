@@ -31,7 +31,7 @@ Esta matriz registra implementación y pruebas, no asigna una nota ni sustituye 
 - [SQL](../flask_app/SQL/squema.sql).
 - [DER SVG](DER.svg), [DER PNG](DER.png) y [fuente Mermaid y relaciones](DER.md).
 - [README de instalación](../README.md), [.env.example](../.env.example), [.gitignore](../.gitignore).
-- [Guía Railway](railway.md) y [configuración de arranque](../railway.json).
+- [Guía Render](render.md) y [configuración de arranque](../render.yaml).
 - [Pruebas](../tests/test_app.py) y [revisión de navegador](../scripts/revisar_visual.py).
 
 ## Evidencia visual
@@ -45,10 +45,10 @@ Los datos de estas capturas son ficticios y se generaron en una base temporal:
 - [Detalle](capturas/detalle.png)
 - [Móvil](capturas/movil.png)
 
-## Pendientes externos antes de entregar
+## Publicación y pendientes externos antes de entregar
 
-- Publicar el repositorio en la cuenta GitHub elegida.
-- Crear/conectar Railway y MySQL, importar el esquema y desplegar.
+- Repositorio publicado: https://github.com/akon1212233/donaciones-de-peluches
+- Crear/conectar Render y MySQL, importar el esquema y desplegar.
 - Verificar la URL HTTPS pública, persistencia después de reiniciar y registrar el enlace en el README.
 - Confirmar con el instructor el inicio oficial, fecha límite y forma de entrega. El código no acredita el plazo ni asegura medalla o 100/100.
 

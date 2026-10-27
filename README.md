@@ -50,9 +50,9 @@ Alternativa: selecciona la base vacía e importa [squema.sql](flask_app/SQL/sque
 | `SECRET_KEY` | Clave aleatoria estable de al menos 32 caracteres; firma sesiones y formularios |
 | `MYSQL_HOST`, `MYSQL_PORT` | Servidor y puerto de MySQL |
 | `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DB` | Usuario, contraseña y base de datos |
-| `COOKIE_SECURE` | `false` en HTTP local, `true` en HTTPS de Railway |
+| `COOKIE_SECURE` | `false` en HTTP local, `true` en HTTPS de Render |
 | `APP_DEBUG` | `false` por defecto; `true` solo para desarrollo local |
-| `PORT` | Puerto asignado por Railway; localmente 5000 por defecto |
+| `PORT` | Puerto asignado por Render; localmente 5000 por defecto |
 
 La aplicación exige sus variables de conexión y clave al iniciar; no contiene credenciales de respaldo. Las variables del servidor tienen prioridad sobre `.env`.
 
@@ -85,9 +85,9 @@ Las dependencias opcionales de pruebas visuales están en `requirements-dev.txt`
 
 ## Despliegue y entrega
 
-Sigue [la guía de Railway](docs/railway.md). `railway.json` configura Gunicorn y el chequeo `/salud`, que requiere acceso a las tablas de la BD. No arranca con el servidor de desarrollo.
+Sigue [la guía de Render](docs/render.md). `render.yaml` configura Gunicorn y el chequeo `/salud`, que requiere acceso a las tablas de la BD. No arranca con el servidor de desarrollo.
 
-**URL pública: pendiente de conectar GitHub y Railway.** Tener los archivos de despliegue no equivale a una publicación. Agrega aquí el enlace verificado antes de entregar.
+**URL pública: pendiente de configurar MySQL y desplegar en Render.** Tener los archivos de despliegue no equivale a una publicación. Agrega aquí el enlace verificado antes de entregar.
 
 Entregables: código MVC, requisitos/dependencias, `.env.example`, `.gitignore`, SQL, DER, guía de ejecución y pruebas. Los porcentajes, medallas y plazos oficiales se encuentran en `docs/requisitos.md`; la nota y la elegibilidad dependen del instructor y de la entrega efectiva.
 

@@ -1,6 +1,6 @@
 -- Selecciona una base vacía antes de ejecutar este script.
 -- Local: CREATE DATABASE donaciones_peluches_db CHARACTER SET utf8mb4;
--- Railway: usa la base indicada por MYSQLDATABASE, sin crear otra.
+-- Hosting: usa la base configurada en MYSQL_DB, sin crear otra.
 
 CREATE TABLE usuarios(
     id_usuario INT AUTO_INCREMENT,
