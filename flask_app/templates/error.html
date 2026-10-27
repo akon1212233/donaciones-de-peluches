@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}Error {{ codigo }} · Donación de Peluches{% endblock %}
+{% block heading %}<h1>No pudimos completar la solicitud</h1>{% endblock %}
+{% block content %}
+<p class="message error" role="alert">{{ mensaje }}</p>
+<a href="{{ url_for('dashboard') if session.get('usuario_id') else url_for('index') }}">Volver al inicio</a>
+{% endblock %}

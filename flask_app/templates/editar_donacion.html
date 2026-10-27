@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Editar Donación · Donación de Peluches{% endblock %}
+{% block heading %}<h1>Editar Donación</h1>{% endblock %}
+{% block content %}
+<form class="fields donation-form" method="post" action="{{ url_for('editar_donacion', id_peluche=peluche.id_peluche) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="nombre">Nombre</label>
+    <input id="nombre" name="nombre" value="{{ datos.get('nombre', '') }}" maxlength="100" required>
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" rows="8" required>{{ datos.get('descripcion', '') }}</textarea>
+    <button type="submit" class="submit">Guardar</button>
+</form>
+{% endblock %}

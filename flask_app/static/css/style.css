@@ -1,0 +1,56 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #222; background: #f4f4f4; font: 16px/1.5 Arial, Helvetica, sans-serif; }
+.brand { background: #ddd; border-bottom: 1px solid #aaa; padding: 12px 24px; text-align: center; font-weight: 600; }
+.page { width: min(920px, calc(100% - 40px)); min-height: 480px; margin: 40px auto; padding: 32px; border: 1px solid #aaa; background: #fff; box-shadow: 0 3px 0 #ddd; }
+.page-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
+.page-header:empty { display: none; }
+h1, h2 { font-weight: 500; font-size: 26px; line-height: 1.25; margin: 0; overflow-wrap: anywhere; }
+nav, .actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+nav { margin-left: auto; }
+form { margin: 0; }
+a { color: #075bb9; text-underline-offset: 3px; }
+button, input, textarea { font: inherit; }
+button, .button { display: inline-block; border: 1px solid #555; border-radius: 4px; padding: 5px 12px; background: #fff; color: #222; text-decoration: none; cursor: pointer; font-size: 14px; line-height: 1.5; }
+button:hover, .button:hover { background: #e9e9e9; }
+:focus-visible { outline: 3px solid #1261ae; outline-offset: 3px; }
+.auth-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+.auth-grid h1, .auth-grid h2 { text-align: center; margin-bottom: 28px; }
+.fields { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px 12px; align-items: start; }
+.fields label { padding-top: 5px; font-size: 14px; }
+input, textarea { width: 100%; min-width: 0; border: 1px solid #777; background: white; border-radius: 2px; padding: 6px 8px; }
+textarea { resize: vertical; min-height: 170px; }
+.submit { grid-column: 2; justify-self: end; }
+.donation-form { max-width: 520px; }
+.message { padding: 10px 12px; margin: 0 0 16px; border-left: 3px solid; }
+.error { color: #b31717; background: #fff5f5; }
+.success { color: #24643a; background: #f0f8f1; }
+.list-title { font-size: 17px; margin-bottom: 8px; }
+.donations { list-style: none; padding: 0; margin: 0; }
+.donation-row { display: grid; grid-template-columns: minmax(100px, 1fr) minmax(120px, 1fr) minmax(240px, 1.4fr); align-items: center; gap: 16px; padding: 20px 0; border-bottom: 1px solid #777; }
+.donation-name { font-weight: 600; overflow-wrap: anywhere; }
+.donor { border-left: 1px solid #777; padding-left: 16px; overflow-wrap: anywhere; }
+.actions { justify-content: flex-end; font-size: 14px; }
+.adopt, .badge { background: #d7d7d7; }
+.badge { padding: 6px 10px; border: 1px solid #777; border-radius: 4px; font-size: 12px; }
+.empty { padding: 24px 0; color: #555; }
+.detail { border: 1px solid #777; max-width: 560px; margin: 12px auto 0; padding: 26px; }
+.detail h1 { margin-bottom: 24px; }
+dl { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 16px; margin: 0 0 24px; }
+dd { margin: 0; overflow-wrap: anywhere; }
+.description { white-space: pre-wrap; }
+.detail-bar { display: flex; gap: 20px; flex-wrap: wrap; padding: 12px; background: #ddd; border: 1px solid #999; margin: 12px 0 0; }
+.detail-bar strong { font-weight: 400; overflow-wrap: anywhere; }
+@media (max-width: 720px) {
+    .page { width: calc(100% - 24px); padding: 22px; margin: 20px auto; }
+    .auth-grid { grid-template-columns: 1fr; gap: 40px; }
+    .donation-row { grid-template-columns: 1fr 1fr; }
+    .actions { grid-column: 1 / -1; justify-content: flex-start; }
+    h1, h2 { font-size: 24px; }
+}
+@media (max-width: 400px) {
+    .fields { grid-template-columns: 1fr; gap: 8px; }
+    .submit { grid-column: 1; margin-top: 8px; }
+    .detail { padding: 16px; }
+    dl { grid-template-columns: 1fr; gap: 8px; }
+    dt { font-weight: bold; }
+}

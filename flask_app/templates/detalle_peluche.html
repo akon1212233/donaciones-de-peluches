@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}{{ peluche.nombre }} · Donación de Peluches{% endblock %}
+{% block content %}
+<article class="detail">
+    <h1>{{ peluche.nombre }}</h1>
+    <dl>
+        <dt>Dueño:</dt><dd>{{ donador.nombre }} {{ donador.apellido }}</dd>
+        <dt>Descripción:</dt><dd class="description">{{ peluche.descripcion }}</dd>
+    </dl>
+    {% if adoptante %}
+    <p class="detail-bar">Adoptado por: <strong>{{ adoptante.nombre }} {{ adoptante.apellido }}</strong></p>
+    {% endif %}
+    <p class="detail-bar">Visitas: <strong>{{ peluche.visitas }}</strong></p>
+</article>
+{% endblock %}
