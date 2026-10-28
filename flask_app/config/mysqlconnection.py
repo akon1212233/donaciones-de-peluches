@@ -1,3 +1,5 @@
+import ssl
+
 import pymysql
 from flask import current_app
 
@@ -5,6 +7,8 @@ from flask import current_app
 class MySQLConnection:
     @staticmethod
     def get_db():
+        certificado = current_app.config.get('MYSQL_SSL_CA')
+        contexto_ssl = ssl.create_default_context(cafile=certificado) if certificado else None
         return pymysql.connect(
             host=current_app.config['MYSQL_HOST'],
             port=current_app.config['MYSQL_PORT'],
@@ -13,6 +17,7 @@ class MySQLConnection:
             database=current_app.config['MYSQL_DB'],
             unix_socket=current_app.config.get('MYSQL_SOCKET'),
             charset='utf8mb4',
+            ssl=contexto_ssl,
             cursorclass=pymysql.cursors.DictCursor,
             connect_timeout=5,
             read_timeout=10,

@@ -17,6 +17,7 @@ app.config.update(
     MYSQL_PASSWORD=os.environ['MYSQL_PASSWORD'],
     MYSQL_DB=os.environ['MYSQL_DB'],
     MYSQL_SOCKET=os.getenv('MYSQL_SOCKET'),
+    MYSQL_SSL_CA=os.getenv('MYSQL_SSL_CA'),
     SESSION_COOKIE_HTTPONLY=True,
     SESSION_COOKIE_SAMESITE='Lax',
     SESSION_COOKIE_SECURE=os.getenv('COOKIE_SECURE', 'false').lower() == 'true',
